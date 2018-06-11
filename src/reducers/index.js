@@ -8,3 +8,4 @@ function characters(state = characters_json, action) {
 }
 
 //https://github.com/15Dkatz/redux-collection-guides
+//https://coursehunters.net/course/react-js-osvoenie-redux 17
