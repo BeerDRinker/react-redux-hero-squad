@@ -6,3 +6,5 @@ function characters(state = characters_json, action) {
 			return state;
 	}
 }
+
+//https://github.com/15Dkatz/redux-collection-guides
