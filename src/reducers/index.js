@@ -1,11 +1,17 @@
-import characters_json from '../data/characters.json';
+import characters_json from "../data/characters.json";
+import { ADD_CHARACTER } from "../actions/index";
 
 function characters(state = characters_json, action) {
 	switch (action.type) {
+		case ADD_CHARACTER:
+			let characters = state.filter(item => item.id !== action.id);
+			return characters;
 		default:
 			return state;
 	}
 }
+
+export default characters;
 
 //https://github.com/15Dkatz/redux-collection-guides
 //https://coursehunters.net/course/react-js-osvoenie-redux 17

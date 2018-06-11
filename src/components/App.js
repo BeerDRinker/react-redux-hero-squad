@@ -1,13 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
-class App extends Component {
+const mapStateToProps = state => {
+	return {
+		squad: state
+	};
+};
+
+class appCompnent extends Component {
 	render() {
 		return (
 			<div>
-				Hello!
+				<ul>
+					{this.props.squad.map(hero => <li key={hero.id}>{hero.name}</li>)}
+				</ul>
 			</div>
-		)
+		);
 	}
-};
+}
+
+const App = connect(mapStateToProps)(appCompnent);
 
 export default App;
