@@ -1,24 +1,19 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 
-const mapStateToProps = state => {
-	return {
-		squad: state.characters
-	};
-};
+import CharactersList from "./CharactersList";
+import HeroesList from "./HeroesList";
 
-class appCompnent extends Component {
+class App extends Component {
 	render() {
 		return (
 			<div>
-				<ul>
-					{this.props.squad.map(hero => <li key={hero.id}>{hero.name}</li>)}
-				</ul>
+				<h2>SuperSuqad</h2>
+				<CharactersList />
+				<h2>Heroes</h2>
+				<HeroesList />
 			</div>
 		);
 	}
 }
-
-const App = connect(mapStateToProps)(appCompnent);
 
 export default App;
