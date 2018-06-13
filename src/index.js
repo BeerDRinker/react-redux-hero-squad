@@ -14,7 +14,7 @@ const store = createStore(
 	composeWithDevTools(applyMiddleware(logger))
 );
 
-console.log('store.getState()', store.getState());
+// console.log("store.getState()", store.getState());
 store.dispatch(addCharacterById(2));
 
 ReactDOM.render(
