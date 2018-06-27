@@ -11,7 +11,7 @@ class HeroesList extends Component {
 					{this.props.heroes.map(hero => {
 						return (
 							<li key={hero.id} className="list-group-item">
-								<div className="list-iyem">{hero.name}</div>
+								<div className="list-item">{hero.name}</div>
 								<div
 									className="list-item right-button"
 									onClick={() => this.props.removeCharacterById(hero.id)}

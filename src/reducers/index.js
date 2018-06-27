@@ -9,4 +9,4 @@ export default combineReducers({
 });
 
 //https://github.com/15Dkatz/redux-collection-guides
-//https://coursehunters.net/course/react-js-osvoenie-redux 17
+//https://coursehunters.net/course/react-js-osvoenie-redux
