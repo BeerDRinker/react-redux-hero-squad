@@ -18,7 +18,7 @@ class CharactersList extends Component {
 									className="list-item right-button"
 									onClick={() => this.props.addCharacterById(character.id)}
 								>
-									x
+									+
 								</div>
 							</li>
 						);

@@ -6,7 +6,7 @@ class HeroesList extends Component {
 	render() {
 		return (
 			<div>
-				<h4>Your Heroe Squad:</h4>
+				<h4>Your Heroe Squad</h4>
 				<ul className="list-group">
 					{this.props.heroes.map(hero => {
 						return (
@@ -33,7 +33,4 @@ function mapStateToProps(state) {
 	};
 }
 
-export default connect(
-	mapStateToProps,
-	{ removeCharacterById }
-)(HeroesList);
+export default connect(mapStateToProps,{ removeCharacterById })(HeroesList);

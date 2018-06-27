@@ -1,10 +1,6 @@
 import characters_json from "../data/characters.json";
 import { ADD_CHARACTER, REMOVE_CHARACTER } from "../actions/index";
-
-function createCharacter(id) {
-	let character = characters_json.find(c => c.id === id);
-	return character;
-}
+import { createCharacter } from './helpers';
 
 export default function characters(state = characters_json, action) {
 	switch (action.type) {
@@ -12,8 +8,8 @@ export default function characters(state = characters_json, action) {
 			let characters = state.filter(item => item.id !== action.id);
 			return characters;
 		case REMOVE_CHARACTER:
-			let heroes = [...state, createCharacter(action.id)];
-			return heroes;
+			characters = [...state, createCharacter(action.id)];
+			return characters;
 		default:
 			return state;
 	}
